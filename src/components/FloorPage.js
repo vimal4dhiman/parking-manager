@@ -12,13 +12,7 @@ const FloorPage = ({ floors, setFloors }) => {
   const numRows = 5;
   const numCols = 4;
 
-  const [buttonData, setButtonData] = useState(() => {
-    const initialData = [];
-    for (let i = 0; i < numRows; i++) {
-      initialData.push(Array(numCols).fill(0));
-    }
-    return initialData;
-  });
+  const [buttonData, setButtonData] = useState(floor.buttonData);
 
   const [popupVisible, setPopupVisible] = useState(false);
 
@@ -46,7 +40,7 @@ const FloorPage = ({ floors, setFloors }) => {
       const updatedButtonData = [...buttonData];
       updatedButtonData[rowncol.row][rowncol.col] = option;
       setButtonData(updatedButtonData);
-
+      newFloors[floorId].buttonData = buttonData;
       setFloors(newFloors);
     } else if (buttonData[row][col] === 1 && option === 4) {
       newFloors[floorId].bikeParking -= 1;
@@ -76,6 +70,7 @@ const FloorPage = ({ floors, setFloors }) => {
       buttonData[rowncol.row][rowncol.col] = 0;
       setButtonData(buttonData);
     }
+    newFloors[floorId].buttonData = buttonData;
     setFloors(newFloors);
   };
 

@@ -5,11 +5,66 @@ import Floors from "./components/Floors";
 import { createContext, useState } from "react";
 
 const floorsInfo = [
-  { floorNumber: 0, carParking: 20, bikeParking: 40 },
-  { floorNumber: 1, carParking: 20, bikeParking: 40 },
-  { floorNumber: 2, carParking: 20, bikeParking: 40 },
-  { floorNumber: 3, carParking: 20, bikeParking: 40 },
-  { floorNumber: 4, carParking: 20, bikeParking: 40 },
+  {
+    floorNumber: 0,
+    carParking: 20,
+    bikeParking: 40,
+    buttonData: () => {
+      const initialData = [];
+      for (let i = 0; i < 5; i++) {
+        initialData.push(Array(4).fill(0));
+      }
+      return initialData;
+    },
+  },
+  {
+    floorNumber: 1,
+    carParking: 20,
+    bikeParking: 40,
+    buttonData: () => {
+      const initialData = [];
+      for (let i = 0; i < 5; i++) {
+        initialData.push(Array(4).fill(0));
+      }
+      return initialData;
+    },
+  },
+  {
+    floorNumber: 2,
+    carParking: 20,
+    bikeParking: 40,
+    buttonData: () => {
+      const initialData = [];
+      for (let i = 0; i < 5; i++) {
+        initialData.push(Array(4).fill(0));
+      }
+      return initialData;
+    },
+  },
+  {
+    floorNumber: 3,
+    carParking: 20,
+    bikeParking: 40,
+    buttonData: () => {
+      const initialData = [];
+      for (let i = 0; i < 5; i++) {
+        initialData.push(Array(4).fill(0));
+      }
+      return initialData;
+    },
+  },
+  {
+    floorNumber: 4,
+    carParking: 20,
+    bikeParking: 40,
+    buttonData: () => {
+      const initialData = [];
+      for (let i = 0; i < 5; i++) {
+        initialData.push(Array(4).fill(0));
+      }
+      return initialData;
+    },
+  },
 ];
 
 export const sharedDataContext = createContext();
