@@ -21,7 +21,6 @@ const FloorPage = ({ floors, setFloors }) => {
   });
 
   const [popupVisible, setPopupVisible] = useState(false);
-  const [selectedOption, setSelectedOption] = useState(0);
 
   const showPopup = () => {
     setPopupVisible(true);
@@ -82,7 +81,6 @@ const FloorPage = ({ floors, setFloors }) => {
 
   const hidePopup = (option) => {
     setPopupVisible(false);
-    setSelectedOption(option);
 
     if (option === 1 || option === 2 || option === 4) {
       manageParking(option);
